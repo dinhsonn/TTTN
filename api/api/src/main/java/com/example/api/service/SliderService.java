@@ -1,20 +1,17 @@
 package com.example.api.service;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-
 import com.example.api.entity.Slider;
 
+import java.util.List;
 
 public interface SliderService {
     Slider createSlider(Slider slider);
 
     Slider getSliderById(Long sliderId);
 
-    Page<Slider> getAllSliders(Pageable pageable);
+    List<Slider> getAllSliders();
 
     Slider updateSlider(Slider slider);
 
     void deleteSlider(Long sliderId);
-    
 }

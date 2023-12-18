@@ -1,14 +1,13 @@
 package com.example.api.service.imlp;
 
 import lombok.AllArgsConstructor;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.example.api.entity.Slider;
 import com.example.api.repository.SliderRepository;
 import com.example.api.service.SliderService;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -29,8 +28,8 @@ public class SliderServiceImpl implements SliderService {
     }
 
     @Override
-    public Page<Slider> getAllSliders(Pageable pageable) {
-        return sliderRepository.findAll(pageable);
+    public List<Slider> getAllSliders() {
+        return sliderRepository.findAll();
     }
 
     @Override
