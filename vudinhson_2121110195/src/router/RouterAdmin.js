@@ -13,6 +13,7 @@ import Brand from '../pages/backend/Brand/Brand';
 import AddBrand from '../service/Brand/AddBrand';
 import EditBrand from '../service/Brand/EditBrand';
 import ViewBrand from '../service/Brand/ViewBrand';
+import  User  from '../pages/backend/User/User';
 
 function RouterAdmin() {
   return (
@@ -33,7 +34,11 @@ function RouterAdmin() {
         <Route path="/brand/edit-brand/:id" element={<EditBrand />} />
         <Route path="/brand/view-brand/:id" element={<ViewBrand />} />
         <Route path="/brand/add-brand" element={<AddBrand />} />
+{/* User */}
+        <Route path="/user" element={<User />} />     
     </Routes>
+
+
   );
 }
 
